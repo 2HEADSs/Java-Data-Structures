@@ -2,7 +2,6 @@ package implementations;
 
 import interfaces.List;
 
-import java.util.Arrays;
 import java.util.Iterator;
 
 public class ArrayList<E> implements List<E> {
@@ -30,12 +29,22 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public boolean add(int index, E element) {
+        if (!validIndex(index)) {
+            return false;
+        }
+
+        shiftRight(index);
+        this.elements[index] = element;
         return false;
     }
 
+
     @Override
     public E get(int index) {
-        return null;
+        if (!validIndex(index)) {
+            throw new IndexOutOfBoundsException("Cannot get index " + index + " on ArrayList with " + this.size + " elements!");
+        }
+        return (E) this.elements[index];
     }
 
     @Override
@@ -80,6 +89,16 @@ public class ArrayList<E> implements List<E> {
             tmp[i] = this.elements[i];
         }
         this.elements = tmp;
+    }
+
+    private void shiftRight(int index) {
+        for (int i = this.size - 1; i > index; i--) {
+            this.elements[i + 1] = this.elements;
+        }
+    }
+
+    private boolean validIndex(int index) {
+        return index >= 0 || index < this.size;
     }
 }
 
