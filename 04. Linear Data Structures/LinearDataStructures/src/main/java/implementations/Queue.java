@@ -44,7 +44,7 @@ public class Queue<E> implements AbstractQueue<E> {
 
     @Override
     public E poll() {
-        if(this.isEmpty()){
+        if (this.isEmpty()) {
             throw new IllegalStateException();
         }
 
@@ -57,7 +57,7 @@ public class Queue<E> implements AbstractQueue<E> {
     @Override
     public E peek() {
 
-        if(this.isEmpty()){
+        if (this.isEmpty()) {
             throw new IllegalStateException();
         }
         return this.head.value;
@@ -70,21 +70,24 @@ public class Queue<E> implements AbstractQueue<E> {
 
     @Override
     public boolean isEmpty() {
-        return this.size ==0;
+        return this.size == 0;
     }
 
     @Override
     public Iterator<E> iterator() {
         return new Iterator<E>() {
             private Node<E> current = head;
+
             @Override
             public boolean hasNext() {
-                return current !=null;
+                return current != null;
             }
 
             @Override
             public E next() {
-                return null;
+                E value = current.value;
+                current = current.next;
+                return value;
             }
         };
     }
