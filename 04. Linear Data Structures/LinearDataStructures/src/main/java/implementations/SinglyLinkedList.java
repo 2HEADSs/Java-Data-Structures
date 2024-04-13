@@ -6,20 +6,59 @@ import java.util.Iterator;
 
 public class SinglyLinkedList<E> implements LinkedList<E> {
 
+    private Node<E> head;
+    private int size;
+
+    private static class Node<E> {
+        private E value;
+        private Node<E> next;
+
+        public Node(E element) {
+            this.value = element;
+            this.next = null;
+        }
+    }
+
+    public SinglyLinkedList() {
+        this.head = null;
+        this.size = 0;
+    }
+
     @Override
     public void addFirst(E element) {
+        Node<E> nextElement = new Node<>(element);
+        nextElement.next = this.head;
+        this.head = nextElement;
 
+        this.size++;
     }
 
     @Override
     public void addLast(E element) {
+        Node<E> lastElement = new Node<>(element);
 
+        if (this.isEmpty()) {
+            this.head = lastElement;
+        } else {
+            Node<E> current = this.head;
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = lastElement;
+        }
     }
 
     @Override
     public E removeFirst() {
-        return null;
+        ensureNonEmpty();
+
+        E value = this.head.value;
+        this.head = this.head.next;
+        this.size--;
+        return value;
+
     }
+
 
     @Override
     public E removeLast() {
@@ -28,7 +67,9 @@ public class SinglyLinkedList<E> implements LinkedList<E> {
 
     @Override
     public E getFirst() {
-        return null;
+        ensureNonEmpty();
+
+        return this.head.value;
     }
 
     @Override
@@ -38,16 +79,23 @@ public class SinglyLinkedList<E> implements LinkedList<E> {
 
     @Override
     public int size() {
-        return 0;
+        return this.size;
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return this.size == 0;
     }
 
     @Override
     public Iterator<E> iterator() {
         return null;
     }
+
+    private void ensureNonEmpty() {
+        if (this.isEmpty()) {
+            throw new IllegalStateException();
+        }
+    }
+
 }
