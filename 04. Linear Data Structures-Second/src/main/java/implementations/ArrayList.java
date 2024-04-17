@@ -6,10 +6,26 @@ import java.util.Arrays;
 import java.util.Iterator;
 
 public class ArrayList<E> implements List<E> {
+    private Object[] elements;
+    private static int size;
+
+    public ArrayList() {
+        elements = new Object[4];
+        this.size = 0;
+    }
 
     @Override
     public boolean add(E element) {
-        return false;
+        if (this.size == this.elements.length) {
+            grow();
+        }
+        this.elements[this.size++] = element;
+        return true;
+    }
+
+    private void grow() {
+        this.elements = new Object[this.size * 2];
+
     }
 
     @Override
@@ -34,7 +50,7 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public int size() {
-        return 0;
+        return this.elements.length;
     }
 
     @Override
