@@ -37,7 +37,9 @@ public class Queue<E> implements AbstractQueue<E> {
         ensureNonEmpty();
         E element = this.head.element;
         if (this.size == 1) {
+
             this.head = null;
+            
         } else {
             Node<E> next = this.head.next;
             this.head.next = null;
