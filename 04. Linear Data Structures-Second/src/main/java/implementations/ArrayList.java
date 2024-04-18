@@ -85,7 +85,7 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public boolean contains(E element) {
-        return false;
+        return this.indexOf(element) != -1;
     }
 
     @Override
