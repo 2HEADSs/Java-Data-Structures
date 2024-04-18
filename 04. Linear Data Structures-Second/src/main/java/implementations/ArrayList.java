@@ -2,16 +2,18 @@ package implementations;
 
 import interfaces.List;
 
-import java.util.Arrays;
 import java.util.Iterator;
 
 public class ArrayList<E> implements List<E> {
+    private static final int INITIAL_SIZE = 4;
     private Object[] elements;
-    private static int size;
+    private int size;
+    private int capacity;
 
     public ArrayList() {
-        elements = new Object[4];
+        elements = new Object[INITIAL_SIZE];
         this.size = 0;
+        this.capacity = INITIAL_SIZE;
     }
 
     @Override
@@ -23,39 +25,62 @@ public class ArrayList<E> implements List<E> {
         return true;
     }
 
-    private void grow() {
-        this.elements = new Object[this.size * 2];
-
-    }
 
     @Override
     public boolean add(int index, E element) {
-        return false;
+        if (!validIndex(index)) {
+            return false;
+        }
+        shiftRight(index);
+        this.elements[index] = element;
+        this.size++;
+        return true;
     }
+
 
     @Override
     public E get(int index) {
-        return null;
+        if (!validIndex(index)) {
+            throw new IndexOutOfBoundsException();
+        }
+        return (E) this.elements[index];
     }
 
     @Override
     public E set(int index, E element) {
-        return null;
+        if (!validIndex(index)) {
+            throw new IndexOutOfBoundsException();
+        }
+        Object existing = this.elements[index];
+        this.elements[index] = element;
+        return (E) existing;
     }
 
     @Override
     public E remove(int index) {
-        return null;
+        if (!validIndex(index)) {
+            throw new IndexOutOfBoundsException();
+        }
+        Object existing = this.elements[index];
+        shiftLeft(index);
+        this.size--;
+        return (E) existing;
     }
+
 
     @Override
     public int size() {
-        return this.elements.length;
+        return 0;
     }
 
     @Override
     public int indexOf(E element) {
-        return 0;
+        for (int i = 0; i < this.size; i++) {
+            if (element.equals(this.elements[i])) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     @Override
@@ -65,11 +90,37 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return this.size == 0;
     }
 
     @Override
     public Iterator<E> iterator() {
         return null;
+    }
+
+    private void grow() {
+        int newLength = this.elements.length * 2;
+        Object[] tmp = new Object[newLength];
+        for (int i = 0; i < this.elements.length; i++) {
+            tmp[i] = this.elements[i];
+        }
+        this.elements = tmp;
+    }
+
+    private void shiftRight(int index) {
+        for (int i = this.size - 1; i >= index; i--) {
+            int nextPlace = i + 1;
+            this.elements[nextPlace] = this.elements[i];
+        }
+    }
+
+    private void shiftLeft(int index) {
+        for (int i = index; i < this.size - 1; i++) {
+            this.elements[i] = this.elements[i + 1];
+        }
+    }
+
+    private boolean validIndex(int index) {
+        return index >= 0 && index < this.size;
     }
 }
