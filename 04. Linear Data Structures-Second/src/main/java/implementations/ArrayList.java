@@ -70,7 +70,7 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public int size() {
-        return 0;
+        return this.size;
     }
 
     @Override
