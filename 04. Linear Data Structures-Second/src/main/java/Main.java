@@ -1,5 +1,3 @@
-import implementations.ArrayListOld;
-
 public class Main {
     public static void main(String[] args) {
         ArrayListOld testlist = new ArrayListOld<>();
