@@ -1,6 +1,6 @@
 package benchmark;
 
-import implementations.ArrayList;
+import implementations.ArrayListOld;
 import implementations.Queue;
 import implementations.SinglyLinkedList;
 import implementations.Stack;
@@ -27,12 +27,12 @@ public class BenchmarkTests {
     @Param({"1000", "10000"/*, "100000000"*/})
     private long n;
 
-    private ArrayList<Integer> arrayList = new ArrayList<>();
+    private ArrayListOld<Integer> arrayList = new ArrayListOld<>();
     private Stack<Integer> stack = new Stack<>();
     private Queue<Integer> queue = new Queue<>();
     private SinglyLinkedList<Integer> singlyLinkedList = new SinglyLinkedList<>();
 
-    private void fillArrayListWithRandomValues(ArrayList<Integer> list) {
+    private void fillArrayListWithRandomValues(ArrayListOld<Integer> list) {
         new Random()
                 .ints()
                 .limit(n)
@@ -74,7 +74,7 @@ public class BenchmarkTests {
 
     @Benchmark
     public void testAddInArrayList(Blackhole blackhole) {
-        ArrayList<Integer> numbers = new ArrayList<>();
+        ArrayListOld<Integer> numbers = new ArrayListOld<>();
         for (int i = 0; i < n; i++) {
             numbers.add(i);
         }
