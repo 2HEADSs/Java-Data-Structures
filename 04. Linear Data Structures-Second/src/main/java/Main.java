@@ -1,8 +1,8 @@
-import implementations.ArrayList;
+import implementations.ArrayListOld;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList testlist = new ArrayList<>();
+        ArrayListOld testlist = new ArrayListOld<>();
         testlist.add(1);
         testlist.add(2);
         testlist.add(3);
