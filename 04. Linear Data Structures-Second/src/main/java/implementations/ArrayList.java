@@ -23,20 +23,27 @@ public class ArrayList<E> implements List<E> {
         }
         this.elements[this.size++] = element;
 
-        return false;
+        return true;
     }
 
-    private void grown() {
-        Object[] temp = new Object[this.size * 2];
-        for (int i = 0; i < this.elements.length; i++) {
-            temp[i] = this.elements[i];
-        }
-        this.elements = temp;
-    }
 
     @Override
     public boolean add(int index, E element) {
+        if (index < this.size && index >= 0) {
+            shiftRight(index);
+            this.elements[index] = element;
+            this.size++;
+
+            return true;
+        }
+
         return false;
+    }
+
+    private void shiftRight(int index) {
+        for (int i = this.size; i > index; i--) {
+            this.elements[i] = this.elements[this.size - 1];
+        }
     }
 
     @Override
@@ -77,5 +84,13 @@ public class ArrayList<E> implements List<E> {
     @Override
     public Iterator<E> iterator() {
         return null;
+    }
+
+    private void grown() {
+        Object[] temp = new Object[this.size * 2];
+        for (int i = 0; i < this.elements.length; i++) {
+            temp[i] = this.elements[i];
+        }
+        this.elements = temp;
     }
 }
