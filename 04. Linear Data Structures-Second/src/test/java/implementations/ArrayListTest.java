@@ -10,14 +10,14 @@ public class ArrayListTest {
 
     @Test
     public void addShouldIncreaseCount() {
-        ArrayListOld<Integer> numbers = new ArrayListOld<>();
+        ArrayList<Integer> numbers = new ArrayList<>();
         numbers.add(1);
         assertEquals(1, numbers.size());
     }
 
     @Test
     public void addShouldIncreaseSize() {
-        ArrayListOld<String> strings = new ArrayListOld<>();
+        ArrayList<String> strings = new ArrayList<>();
 
         for (int i = 0; i < 100; i++) {
             strings.add(String.valueOf(i));
@@ -28,7 +28,7 @@ public class ArrayListTest {
 
     @Test
     public void removeShouldReduceSize() {
-        ArrayListOld<String> strings = new ArrayListOld<>();
+        ArrayList<String> strings = new ArrayList<>();
 
         for (int i = 0; i < 100; i++) {
             strings.add(String.valueOf(i));
@@ -43,14 +43,14 @@ public class ArrayListTest {
 
     @Test
     public void testIndexOfShouldReturnMinusOneForEmptyList() {
-        ArrayListOld<String> strings = new ArrayListOld<>();
+        ArrayList<String> strings = new ArrayList<>();
 
         assertEquals(-1, strings.indexOf("1"));
     }
 
     @Test
     public void testIndexOfShouldReturnCorrectIndex() {
-        ArrayListOld<String> strings = new ArrayListOld<>();
+        ArrayList<String> strings = new ArrayList<>();
 
         for (int i = 0; i < 100; i++) {
             strings.add(String.valueOf(i));
@@ -61,7 +61,7 @@ public class ArrayListTest {
 
     @Test
     public void testContainsReturnFalseForEmptyList() {
-        ArrayListOld<String> strings = new ArrayListOld<>();
+        ArrayList<String> strings = new ArrayList<>();
 
         assertFalse(strings.contains("1"));
         strings.add("1");
@@ -70,7 +70,7 @@ public class ArrayListTest {
 
     @Test
     public void testContainsReturnTrue() {
-        ArrayListOld<String> strings = new ArrayListOld<>();
+        ArrayList<String> strings = new ArrayList<>();
 
         for (int i = 0; i < 100; i++) {
             strings.add(String.valueOf(i));
@@ -81,7 +81,7 @@ public class ArrayListTest {
 
     @Test
     public void testSizeShouldReturnZeroEmptyList() {
-        ArrayListOld<String> strings = new ArrayListOld<>();
+        ArrayList<String> strings = new ArrayList<>();
         assertEquals(0, strings.size());
         strings.add("SingleElement");
         assertEquals(1, strings.size());
@@ -89,7 +89,7 @@ public class ArrayListTest {
 
     @Test
     public void testSizeShouldReturnOneHundred() {
-        ArrayListOld<String> strings = new ArrayListOld<>();
+        ArrayList<String> strings = new ArrayList<>();
 
         for (int i = 0; i < 100; i++) {
             strings.add(String.valueOf(i));
@@ -100,25 +100,25 @@ public class ArrayListTest {
 
     @Test
     public void testIsEmptyReturnTrueEmptyList() {
-        ArrayListOld<String> strings = new ArrayListOld<>();
+        ArrayList<String> strings = new ArrayList<>();
 
         assertTrue(strings.isEmpty());
     }
 
     @Test
     public void testIsEmptyShouldReturnFalse() {
-        ArrayListOld<String> strings = new ArrayListOld<>();
+        ArrayList<String> strings = new ArrayList<>();
 
         for (int i = 0; i < 100; i++) {
             strings.add(String.valueOf(i));
         }
-        assertTrue(new ArrayListOld<>().isEmpty());
+        assertTrue(new ArrayList<>().isEmpty());
         assertFalse(strings.isEmpty());
     }
 
     @Test
     public void testIterator() {
-        ArrayListOld<String> strings = new ArrayListOld<>();
+        ArrayList<String> strings = new ArrayList<>();
 
         StringBuilder stringBuilder = new StringBuilder();
 
@@ -146,7 +146,7 @@ public class ArrayListTest {
 
     @Test
     public void testRemoveShouldReturnCorrectElementsAndShiftTheRemaining() {
-        ArrayListOld<String> strings = new ArrayListOld<>();
+        ArrayList<String> strings = new ArrayList<>();
 
         StringBuilder stringBuilder = new StringBuilder();
 
@@ -171,7 +171,7 @@ public class ArrayListTest {
 
     @Test(expected = IndexOutOfBoundsException.class)
     public void testRemoveShouldThrowWithInvalidIndex() {
-        ArrayListOld<String> strings = new ArrayListOld<>();
+        ArrayList<String> strings = new ArrayList<>();
 
         for (int i = 0; i < 100; i++) {
             strings.add(String.valueOf(i));
@@ -182,14 +182,14 @@ public class ArrayListTest {
 
     @Test(expected = IndexOutOfBoundsException.class)
     public void testRemoveShouldThrowWithInvalidIndexZero() {
-        ArrayListOld<String> strings = new ArrayListOld<>();
+        ArrayList<String> strings = new ArrayList<>();
 
         strings.remove(0);
     }
 
     @Test(expected = IndexOutOfBoundsException.class)
     public void testRemoveShouldThrowWithInvalidIndexMinusOne() {
-        ArrayListOld<String> strings = new ArrayListOld<>();
+        ArrayList<String> strings = new ArrayList<>();
 
         for (int i = 0; i < 100; i++) {
             strings.add(String.valueOf(i));
@@ -200,7 +200,7 @@ public class ArrayListTest {
 
     @Test
     public void testGetShouldReturnTheCorrectElement() {
-        ArrayListOld<String> strings = new ArrayListOld<>();
+        ArrayList<String> strings = new ArrayList<>();
 
         for (int i = 0; i < 100; i++) {
             strings.add(String.valueOf(i));
@@ -210,7 +210,7 @@ public class ArrayListTest {
 
     @Test
     public void testSetShouldChangeTheElement() {
-        ArrayListOld<String> strings = new ArrayListOld<>();
+        ArrayList<String> strings = new ArrayList<>();
 
         for (int i = 0; i < 100; i++) {
             strings.add(String.valueOf(i));
@@ -222,7 +222,7 @@ public class ArrayListTest {
 
     @Test
     public void addAndGetMultipleElements() {
-        ArrayListOld<Integer> list = new ArrayListOld<Integer>();
+        ArrayList<Integer> list = new ArrayList<Integer>();
 
         for (int i = 0; i < 100; i++) {
             list.add(i);
@@ -235,7 +235,7 @@ public class ArrayListTest {
 
     @Test
     public void testInsertShouldSetCorrectlyAndShiftRestToTheRight() {
-        ArrayListOld<String> strings = new ArrayListOld<>();
+        ArrayList<String> strings = new ArrayList<>();
 
 
         StringBuilder stringBuilder = new StringBuilder();
