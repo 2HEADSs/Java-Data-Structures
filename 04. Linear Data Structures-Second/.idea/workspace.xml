@@ -7,7 +7,6 @@
     <list default="true" id="efc5f1b0-ff0d-48b5-b5d4-d9f02ab3210a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/implementations/ArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/implementations/ArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfaces/List.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaces/List.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +120,7 @@
       <workItem from="1713381947916" duration="1621000" />
       <workItem from="1713462669811" duration="4970000" />
       <workItem from="1713727404841" duration="673000" />
-      <workItem from="1713815270924" duration="1135000" />
+      <workItem from="1713815270924" duration="2978000" />
     </task>
     <servers />
   </component>
