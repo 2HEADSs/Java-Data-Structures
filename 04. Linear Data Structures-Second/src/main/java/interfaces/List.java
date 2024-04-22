@@ -1,6 +1,7 @@
 package interfaces;
 
 public interface List<E> extends Iterable<E> {
+
     boolean add(E element);
 
     boolean add(int index, E element);
