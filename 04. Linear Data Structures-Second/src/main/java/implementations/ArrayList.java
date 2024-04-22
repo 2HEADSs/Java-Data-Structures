@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 
 public class ArrayList<E> implements List<E> {
+    
 
     @Override
     public boolean add(E element) {
