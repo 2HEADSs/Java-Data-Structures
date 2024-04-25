@@ -33,33 +33,42 @@ public class ArrayList<E> implements List<E> {
             shiftRight(index);
             this.elements[index] = element;
             this.size++;
-
             return true;
         }
 
         return false;
     }
 
-    private void shiftRight(int index) {
-        for (int i = this.size; i > index; i--) {
-            this.elements[i] = this.elements[this.size - 1];
-        }
-    }
 
     @Override
     public E get(int index) {
-        return null;
+        if (index < this.size && index >= 0) {
+            return (E) this.elements[index];
+        }
+        throw new IndexOutOfBoundsException();
     }
 
     @Override
     public E set(int index, E element) {
+        if (index < this.size && index >= 0) {
+            Object element1 = this.elements[index];
+            this.elements[index] = element;
+            return (E) element1;
+        }
         return null;
     }
 
     @Override
     public E remove(int index) {
-        return null;
+        if (index < this.size && index >= 0) {
+            Object element1 = this.elements[index];
+            shiftLeft(index);
+            this.size--;
+            return (E) element1;
+        }
+        throw new IndexOutOfBoundsException();
     }
+
 
     @Override
     public int size() {
@@ -92,5 +101,18 @@ public class ArrayList<E> implements List<E> {
             temp[i] = this.elements[i];
         }
         this.elements = temp;
+    }
+
+    private void shiftLeft(int index) {
+
+        for (int i = index; i < this.size; i++) {
+            this.elements[i] = this.elements[i + 1];
+        }
+    }
+
+    private void shiftRight(int index) {
+        for (int i = this.size - 1; i >= index; i--) {
+            this.elements[i + 1] = this.elements[i];
+        }
     }
 }
