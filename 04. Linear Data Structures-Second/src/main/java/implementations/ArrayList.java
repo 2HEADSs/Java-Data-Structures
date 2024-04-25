@@ -77,22 +77,40 @@ public class ArrayList<E> implements List<E> {
 
     @Override
     public int indexOf(E element) {
-        return 0;
+        int index = -1;
+        for (int i = 0; i < this.size; i++) {
+            if (this.elements[i].equals(element)) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     @Override
     public boolean contains(E element) {
-        return false;
+        return indexOf(element) != -1;
     }
 
     @Override
     public boolean isEmpty() {
-        return this.size > 0;
+        return this.size == 0;
     }
 
     @Override
     public Iterator<E> iterator() {
-        return null;
+        return new Iterator<E>() {
+            private int index = 0;
+
+            @Override
+            public boolean hasNext() {
+                return index < size();
+            }
+
+            @Override
+            public E next() {
+                return get(index++);
+            }
+        };
     }
 
     private void grown() {
