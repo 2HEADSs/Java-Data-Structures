@@ -4,13 +4,13 @@ import interfaces.List;
 
 import java.util.Iterator;
 
-public class test<E> implements List<E> {
+public class testArrayList<E> implements List<E> {
     private static final int INITIAL_SIZE = 4;
     private Object[] elements;
     private int size;
     private int capacity;
 
-    public test() {
+    public testArrayList() {
         elements = new Object[INITIAL_SIZE];
         this.size = 0;
         this.capacity = INITIAL_SIZE;
