@@ -63,6 +63,20 @@ public class Stack<E> implements AbstractStack<E> {
 
     @Override
     public Iterator<E> iterator() {
-        return null;
+
+        return new Iterator<E>() {
+            private Node<E> current = top;
+            @Override
+            public boolean hasNext() {
+                return this.current != null;
+            }
+
+            @Override
+            public E next() {
+                E value = this.current.value;
+                current = this.current.next;
+                return value;
+            }
+        };
     }
 }
