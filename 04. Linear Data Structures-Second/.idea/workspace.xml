@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efc5f1b0-ff0d-48b5-b5d4-d9f02ab3210a" name="Changes" comment="" />
+    <list default="true" id="efc5f1b0-ff0d-48b5-b5d4-d9f02ab3210a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/implementations/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/implementations/Stack.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,12 +39,13 @@
     "Application.BenchmarkTests.executor": "Run",
     "Application.Main.executor": "Run",
     "JUnit.ArrayListTest.executor": "Run",
+    "JUnit.StackTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Programing/Java-Github/Java-Data-Structures-Fund/04. Linear Data Structures/LinearDataStructures",
+    "last_opened_file_path": "C:/Programing/Java-Github/Java-Data-Structures-Fund/04. Linear Data Structures-Second",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -56,7 +60,7 @@
       <recent name="C:\Programing\Java-Github\Java-Data-Structures-Fund\04. Linear Data Structures-Second\src\test\java\benchmark" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ArrayListTest">
+  <component name="RunManager" selected="JUnit.StackTest">
     <configuration name="BenchmarkTests" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="benchmark.BenchmarkTests" />
       <module name="LinearDS" />
@@ -92,8 +96,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StackTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LinearDS" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="implementations.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="implementations" />
+      <option name="MAIN_CLASS_NAME" value="implementations.StackTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StackTest" />
         <item itemvalue="JUnit.ArrayListTest" />
         <item itemvalue="Application.BenchmarkTests" />
         <item itemvalue="Application.Main" />
@@ -120,6 +140,7 @@
       <workItem from="1713727404841" duration="673000" />
       <workItem from="1713815270924" duration="3024000" />
       <workItem from="1714071562353" duration="4079000" />
+      <workItem from="1714159610104" duration="3103000" />
     </task>
     <servers />
   </component>
