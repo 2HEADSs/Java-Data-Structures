@@ -6,6 +6,24 @@ import java.util.Iterator;
 
 public class SinglyLinkedList<E> implements LinkedList<E> {
 
+    Node<E> head;
+    private int size;
+
+    private static class Node<E> {
+        private E value;
+        private Node<E> next;
+
+        private Node(E element) {
+            this.value = element;
+            this.next = null;
+        }
+    }
+
+    public SinglyLinkedList() {
+        this.head = null;
+        this.size = 0;
+    }
+
     @Override
     public void addFirst(E element) {
 
@@ -38,12 +56,12 @@ public class SinglyLinkedList<E> implements LinkedList<E> {
 
     @Override
     public int size() {
-        return 0;
+        return this.size;
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return this.size == 0;
     }
 
     @Override
