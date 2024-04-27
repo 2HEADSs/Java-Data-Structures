@@ -51,12 +51,6 @@ public class Queue<E> implements AbstractQueue<E> {
         return first.value;
     }
 
-    private void hasElements() {
-        if (this.isEmpty()) {
-            throw new IllegalStateException();
-        }
-    }
-
     @Override
     public E peek() {
         hasElements();
@@ -90,5 +84,12 @@ public class Queue<E> implements AbstractQueue<E> {
                 return value;
             }
         };
+    }
+
+
+    private void hasElements() {
+        if (this.isEmpty()) {
+            throw new IllegalStateException();
+        }
     }
 }
