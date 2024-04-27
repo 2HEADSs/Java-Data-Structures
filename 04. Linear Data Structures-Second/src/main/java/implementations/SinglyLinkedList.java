@@ -1,7 +1,9 @@
 package implementations;
 
 import interfaces.LinkedList;
+import org.apache.tools.ant.taskdefs.Nice;
 
+import java.awt.*;
 import java.util.Iterator;
 
 public class SinglyLinkedList<E> implements LinkedList<E> {
@@ -26,32 +28,80 @@ public class SinglyLinkedList<E> implements LinkedList<E> {
 
     @Override
     public void addFirst(E element) {
+        Node<E> temp = new Node<>(element);
+        temp.next = this.head;
+        this.head = temp;
 
+        this.size++;
     }
 
     @Override
     public void addLast(E element) {
-
+        Node<E> last = new Node<>(element);
+        if (isEmpty()) {
+            last.next = this.head;
+            this.head = last;
+        } else {
+            Node<E> current = this.head;
+            while (current.next !=null){
+                current = current.next;
+            }
+            current.next = last;
+        }
+        this.size++;
     }
 
     @Override
     public E removeFirst() {
-        return null;
+        if(isEmpty()){
+            throw new IllegalStateException();
+        }
+        E value = this.head.value;
+        this.head = this.head.next;
+        this.size--;
+        return value;
     }
 
     @Override
     public E removeLast() {
-        return null;
+
+        if(isEmpty()){
+            throw new IllegalStateException();
+        }
+        if(this.size ==1){
+            E value = this.head.value;
+            this.head = null;
+            this.size--;
+            return value;
+        }
+
+        Node<E> previous = this.head;
+        Node<E> last = this.head;
+        while (last.next !=null){
+            previous = last;
+            last = previous.next;
+        }
+        previous.next = null;
+        this.size--;
+        return last.value;
     }
 
     @Override
     public E getFirst() {
-        return null;
+
+        if(isEmpty()){
+            throw new IllegalStateException();
+        }
+        return this.head.value;
     }
 
     @Override
     public E getLast() {
-        return null;
+        Node<E> last = this.head;
+        while (last.next !=null){
+            last = last.next;
+        }
+        return last.value;
     }
 
     @Override
