@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="efc5f1b0-ff0d-48b5-b5d4-d9f02ab3210a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/implementations/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/implementations/SinglyLinkedList.java" afterDir="false" />
-    </list>
+    <list default="true" id="efc5f1b0-ff0d-48b5-b5d4-d9f02ab3210a" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +43,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Programing/Java-Github/Java-Data-Structures-Fund/04. Linear Data Structures",
+    "last_opened_file_path": "C:/Programing/Java-Github/Java-Data-Structures-Fund/05. Exercise Linear Data Structures/ExerciseLinearDataStructures",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -159,6 +156,7 @@
       <workItem from="1714071562353" duration="4079000" />
       <workItem from="1714159610104" duration="3757000" />
       <workItem from="1714220051177" duration="7240000" />
+      <workItem from="1714313767462" duration="10000" />
     </task>
     <servers />
   </component>
