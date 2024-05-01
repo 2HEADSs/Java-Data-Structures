@@ -29,6 +29,7 @@ public class DoublyLinkedList<E> implements LinkedList<E> {
             this.head = this.tail = newNode;
         } else {
             newNode.next = this.head;
+            this.head.prev = newNode;
             this.head = newNode;
         }
         this.size++;
@@ -40,10 +41,11 @@ public class DoublyLinkedList<E> implements LinkedList<E> {
             this.addFirst(element);
         } else {
             Node<E> newLastNode = new Node<>(element);
-            Node<E> currentLast = this.tail;
-            this.tail = currentLast.next = newLastNode;
-        }
+            newLastNode.prev = this.tail;
+            this.tail.next = newLastNode;
+            this.tail = newLastNode;
         this.size++;
+        }
     }
 
     @Override
@@ -74,14 +76,12 @@ public class DoublyLinkedList<E> implements LinkedList<E> {
             return removeFirst();
         }
 
-        Node<E> current = this.head;
-        Node<E> prev = this.head;
-        while (current.next != null) {
-            prev = current;
-            current = current.next;
-        }
-        E element = current.element;
-        prev.next = null;
+
+        E element = this.tail.element;
+
+        Node<E> currentLast = this.tail;
+        this.tail = currentLast.prev;
+        this.tail.next = null;
         this.size--;
 
         return element;
