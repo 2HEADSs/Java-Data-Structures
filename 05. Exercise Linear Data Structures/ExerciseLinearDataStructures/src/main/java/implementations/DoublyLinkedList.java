@@ -26,7 +26,7 @@ public class DoublyLinkedList<E> implements LinkedList<E> {
     public void addFirst(E element) {
         Node<E> newNode = new Node<>(element);
         if (this.head == null) {
-            this.head = newNode;
+            this.head = this.tail = newNode;
         } else {
             newNode.next = this.head;
             this.head = newNode;
@@ -36,15 +36,12 @@ public class DoublyLinkedList<E> implements LinkedList<E> {
 
     @Override
     public void addLast(E element) {
-        Node<E> newNode = new Node<>(element);
-        if (this.head == null) {
-            this.head = newNode;
+        if (this.size == 0) {
+            this.addFirst(element);
         } else {
-            Node<E> current = this.head;
-            while (current.next != null) {
-                current = current.next;
-            }
-            current.next = newNode;
+            Node<E> newLastNode = new Node<>(element);
+            Node<E> currentLast = this.tail;
+            this.tail = currentLast.next = newLastNode;
         }
         this.size++;
     }
@@ -54,7 +51,7 @@ public class DoublyLinkedList<E> implements LinkedList<E> {
         ensureNotEmpty();
         E element = this.head.element;
         if (this.size == 1) {
-            this.head = null;
+            this.head = this.tail = null;
         } else {
             Node<E> newHead = this.head.next;
             this.head.next = null;
