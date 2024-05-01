@@ -29,6 +29,7 @@ public class DoublyLinkedList<E> implements LinkedList<E> {
             this.head = newNode;
         } else {
             newNode.next = this.head;
+            this.head = newNode;
         }
         this.size++;
     }
