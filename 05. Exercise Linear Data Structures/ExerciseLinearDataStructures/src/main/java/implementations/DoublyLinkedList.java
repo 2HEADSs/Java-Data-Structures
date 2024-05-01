@@ -25,10 +25,11 @@ public class DoublyLinkedList<E> implements LinkedList<E> {
     @Override
     public void addFirst(E element) {
         Node<E> newNode = new Node<>(element);
-        if (this.head != null) {
+        if (this.head == null) {
             this.head = newNode;
+        } else {
+            newNode.next = this.head;
         }
-        newNode.next = this.head;
         this.size++;
     }
 
