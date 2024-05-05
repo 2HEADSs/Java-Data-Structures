@@ -23,7 +23,7 @@ public class Tree<E> implements AbstractTree<E> {
         Deque<Tree<E>> childrenQueue = new ArrayDeque<>();
         childrenQueue.offer(this);
 
-        while (!childrenQueue.isEmpty()){
+        while (!childrenQueue.isEmpty()) {
             Tree<E> current = childrenQueue.poll();
 
             result.add(current.value);
@@ -39,21 +39,47 @@ public class Tree<E> implements AbstractTree<E> {
     public List<E> orderDfs() {
         List<E> result = new ArrayList<>();
 
-        this.doDfs(this,result);
+        this.doDfs(this, result);
 
         return result;
     }
 
     private void doDfs(Tree<E> node, List<E> result) {
         for (Tree<E> child : node.children) {
-            this.doDfs(child,result);
+            this.doDfs(child, result);
         }
         result.add(node.value);
     }
 
     @Override
     public void addChild(E parentKey, Tree<E> child) {
+        Tree<E> search = find(parentKey);
 
+        if (search == null) {
+            throw new IllegalArgumentException();
+        }
+
+        search.children.add(child);
+        child.parent = search;
+
+    }
+
+    private Tree<E> find(E parentKey) {
+        Deque<Tree<E>> childrenQueue = new ArrayDeque<>();
+        childrenQueue.offer(this);
+
+        while (!childrenQueue.isEmpty()) {
+            Tree<E> current = childrenQueue.poll();
+
+            if(current.value == parentKey){
+                return current;
+            }
+
+            for (Tree<E> child : current.children) {
+                childrenQueue.offer(child);
+            }
+        }
+        return null;
     }
 
     @Override
