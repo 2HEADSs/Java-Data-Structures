@@ -37,7 +37,18 @@ public class Tree<E> implements AbstractTree<E> {
 
     @Override
     public List<E> orderDfs() {
-        return null;
+        List<E> result = new ArrayList<>();
+
+        this.doDfs(this,result);
+
+        return result;
+    }
+
+    private void doDfs(Tree<E> node, List<E> result) {
+        for (Tree<E> child : node.children) {
+            this.doDfs(child,result);
+        }
+        result.add(node.value);
     }
 
     @Override
