@@ -10,7 +10,7 @@ public class Tree<E> implements AbstractTree<E> {
     private E value;
     private Tree<E> parent;
     private List<Tree<E>> children;
-    
+
     public Tree(E value, Tree<E>... subtrees) {
         this.value = value;
         this.parent = null;
