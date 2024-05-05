@@ -71,7 +71,7 @@ public class Tree<E> implements AbstractTree<E> {
         while (!childrenQueue.isEmpty()) {
             Tree<E> current = childrenQueue.poll();
 
-            if(current.value == parentKey){
+            if(current.value.equals(parentKey)){
                 return current;
             }
 
