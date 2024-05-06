@@ -106,14 +106,12 @@ public class Tree<E> implements AbstractTree<E> {
             this.value = secondNode.value;
             this.parent = null;
             this.children = secondNode.children;
-            firstNode.parent = null;
             return;
         }
         if (secondParent == null) {
             this.value = firstNode.value;
             this.parent = null;
             this.children = firstNode.children;
-            secondNode.parent = null;
             return;
         }
 
