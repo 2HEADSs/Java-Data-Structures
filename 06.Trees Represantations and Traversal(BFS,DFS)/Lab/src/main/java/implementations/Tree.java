@@ -93,6 +93,43 @@ public class Tree<E> implements AbstractTree<E> {
 
     @Override
     public void swap(E firstKey, E secondKey) {
+        Tree<E> firstNode = find(firstKey);
+        Tree<E> secondNode = find(secondKey);
+
+        if (firstNode == null || secondNode == null) {
+            throw new IllegalArgumentException();
+        }
+        Tree<E> firstParent = firstNode.parent;
+        Tree<E> secondParent = secondNode.parent;
+
+        if (firstParent == null) {
+            this.value = secondNode.value;
+            this.parent = null;
+            this.children = secondNode.children;
+            firstNode.parent = null;
+            return;
+        }
+        if (secondParent == null) {
+            this.value = firstNode.value;
+            this.parent = null;
+            this.children = firstNode.children;
+            secondNode.parent = null;
+            return;
+        }
+
+
+        Tree<E> tmp = firstNode;
+        firstNode = secondNode;
+        secondNode = tmp;
+
+        firstNode.parent = secondParent;
+        secondNode.parent = firstParent;
+
+        int firstIndex = firstParent.children.indexOf(firstNode);
+        int secondIndex = secondParent.children.indexOf(secondNode);
+
+        firstParent.children.set(firstIndex, secondNode);
+        secondParent.children.set(secondIndex, firstNode);
 
     }
 
