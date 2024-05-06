@@ -23,9 +23,9 @@ public class Tree<E> implements AbstractTree<E> {
     @Override
     public List<E> orderBfs() {
         List<E> result = new ArrayList<>();
-//        if (this.value == null) {
-//            return result;
-//        }
+        if (this.value == null) {
+            return result;
+        }
         Deque<Tree<E>> childrenQueue = new ArrayDeque<>();
         childrenQueue.offer(this);
 
@@ -84,9 +84,11 @@ public class Tree<E> implements AbstractTree<E> {
         }
         toRemove.children.clear();
         Tree<E> parent = toRemove.parent;
+
         if (parent != null) {
             parent.children.remove(toRemove);
         }
+        toRemove.value = null;
     }
 
     @Override
