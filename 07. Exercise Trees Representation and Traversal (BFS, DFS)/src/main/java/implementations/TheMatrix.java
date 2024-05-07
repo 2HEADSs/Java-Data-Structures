@@ -27,6 +27,6 @@ public class TheMatrix {
             }
             builder.append(System.lineSeparator());
         }
-        return null;
+        return builder.toString().trim();
     }
 }
