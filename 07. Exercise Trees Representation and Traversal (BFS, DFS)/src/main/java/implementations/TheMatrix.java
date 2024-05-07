@@ -3,7 +3,7 @@ package implementations;
 public class TheMatrix {
     private char[][] matrix;
     private char fillChar;
-    private char toBeReplaced;
+    private char startChar;
     private int startRow;
     private int startCol;
 
@@ -12,15 +12,21 @@ public class TheMatrix {
         this.fillChar = fillChar;
         this.startRow = startRow;
         this.startCol = startCol;
-        this.toBeReplaced = this.matrix[this.startRow][this.startCol];
+        this.startChar = this.matrix[this.startRow][this.startCol];
     }
 
     public void solve() {
-        // TODO: Implement
+
     }
 
     public String toOutputString() {
-        // TODO: Implement
+        StringBuilder builder = new StringBuilder();
+        for (int r = 0; r < this.matrix.length; r++) {
+            for (int c = 0; c < this.matrix[r].length; c++) {
+                builder.append(this.matrix[r][c]);
+            }
+            builder.append(System.lineSeparator());
+        }
         return null;
     }
 }
