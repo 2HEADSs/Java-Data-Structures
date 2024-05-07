@@ -22,7 +22,7 @@ public class TheMatrixTest {
         TheMatrix theMatrix = new TheMatrix(matrix, fillChar, startRow, startCol);
 
         theMatrix.solve();
-
+        System.out.println(theMatrix.toOutputString());
         String str = theMatrix.toOutputString();
         assertEquals(
                 "xxx\r\n" +
