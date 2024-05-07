@@ -16,7 +16,25 @@ public class TheMatrix {
     }
 
     public void solve() {
+        fillMatrix(this.startRow, this.startCol);
+    }
 
+    private void fillMatrix(int row, int col) {
+        if (isOutOfBounds(row, col) || this.matrix[row][col] != this.startChar) {
+            return;
+        }
+        this.matrix[row][col] = this.fillChar;
+
+        System.out.println(this.toOutputString());
+
+        this.fillMatrix(row + 1, col);
+        this.fillMatrix(row, col + 1);
+        this.fillMatrix(row - 1, col);
+        this.fillMatrix(row, col - 1);
+    }
+
+    private boolean isOutOfBounds(int row, int col) {
+        return row < 0 || row >= this.matrix.length || col < 0 || col >= this.matrix[row].length;
     }
 
     public String toOutputString() {
