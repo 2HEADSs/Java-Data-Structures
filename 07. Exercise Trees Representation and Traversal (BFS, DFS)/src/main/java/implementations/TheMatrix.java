@@ -29,6 +29,15 @@ public class TheMatrix {
             if (isInBounds(row + 1, col) && this.matrix[row + 1][col] == this.startChar) {
                 coordinates.offer(new int[]{row + 1, col});
             }
+            if (isInBounds(row - 1, col) && this.matrix[row - 1][col] == this.startChar) {
+                coordinates.offer(new int[]{row - 1, col});
+            }
+            if (isInBounds(row, col + 1) && this.matrix[row][col + 1] == this.startChar) {
+                coordinates.offer(new int[]{row, col + 1});
+            }
+            if (isInBounds(row, col - 1) && this.matrix[row][col - 1] == this.startChar) {
+                coordinates.offer(new int[]{row, col - 1});
+            }
         }
 //        fillMatrix(this.startRow, this.startCol);
     }
