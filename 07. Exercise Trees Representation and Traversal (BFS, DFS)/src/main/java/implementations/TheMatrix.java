@@ -33,7 +33,9 @@ public class TheMatrix {
 //        fillMatrix(this.startRow, this.startCol);
     }
 
-
+    private boolean isInBounds(int row, int col) {
+        return !isOutOfBounds(row, col);
+    }
 
 //    private void fillMatrix(int row, int col) {
 //        if (isOutOfBounds(row, col) || this.matrix[row][col] != this.startChar) {
