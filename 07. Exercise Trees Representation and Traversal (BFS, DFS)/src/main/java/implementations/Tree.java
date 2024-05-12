@@ -16,6 +16,7 @@ public class Tree<E> implements AbstractTree<E> {
         this.children = new ArrayList<>();
         this.children.addAll(Arrays.asList(children));
         for (int i = 0; i < children.length; i++) {
+            //debug
             children[i].setParent(this);
         }
     }
@@ -27,13 +28,13 @@ public class Tree<E> implements AbstractTree<E> {
 
     @Override
     public void addChild(Tree<E> child) {
-
+        this.children.add(child);
     }
 
 
     @Override
     public Tree<E> getParent() {
-        return null;
+        return this.parent;
     }
 
     @Override
