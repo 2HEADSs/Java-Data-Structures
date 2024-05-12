@@ -3,7 +3,6 @@ package implementations;
 import interfaces.AbstractTree;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Tree<E> implements AbstractTree<E> {
@@ -39,7 +38,28 @@ public class Tree<E> implements AbstractTree<E> {
 
     @Override
     public String getAsString() {
-        return null;
+        StringBuilder stringBuilder = new StringBuilder();
+        traverseTreeWithRecurrence(stringBuilder, 0, this);
+
+        return stringBuilder.toString().trim();
+    }
+
+    private void traverseTreeWithRecurrence(StringBuilder stringBuilder, int indent, Tree<E> tree) {
+        stringBuilder
+                .append(this.getPadding(indent))
+                .append(tree.getKey())
+                .append(System.lineSeparator());
+        for (Tree<E> child : tree.children) {
+            traverseTreeWithRecurrence(stringBuilder, indent + 2, child);
+        }
+    }
+
+    private String getPadding(int size) {
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < size; i++) {
+            builder.append(" ");
+        }
+        return builder.toString();
     }
 
     @Override
