@@ -11,14 +11,15 @@ public class Tree<E> implements AbstractTree<E> {
     private Tree<E> parent;
     private List<Tree<E>> children;
 
-    public Tree(E key, Tree<E>... children) {
+    public Tree(E key) {
+//    public Tree(E key, Tree<E>... children) {
         this.key = key;
         this.children = new ArrayList<>();
-        this.children.addAll(Arrays.asList(children));
-        for (int i = 0; i < children.length; i++) {
-            //debug
-            children[i].setParent(this);
-        }
+//        this.children.addAll(Arrays.asList(children));
+//        for (int i = 0; i < children.length; i++) {
+//            //debug
+//            children[i].setParent(this);
+//        }
     }
 
     @Override
@@ -39,7 +40,7 @@ public class Tree<E> implements AbstractTree<E> {
 
     @Override
     public E getKey() {
-        return null;
+        return this.key;
     }
 
     @Override
