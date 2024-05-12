@@ -2,19 +2,33 @@ package implementations;
 
 import interfaces.AbstractTree;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Tree<E> implements AbstractTree<E> {
+    private E key;
+    private Tree<E> parent;
+    private List<Tree<E>> children;
+
+    public Tree(E key, Tree<E>... children) {
+        this.key = key;
+        this.children = new ArrayList<>();
+        this.children.addAll(Arrays.asList(children));
+        for (int i = 0; i < children.length; i++) {
+            children[i].setParent(this);
+        }
+    }
 
     @Override
     public void setParent(Tree<E> parent) {
-
     }
 
     @Override
     public void addChild(Tree<E> child) {
 
     }
+
 
     @Override
     public Tree<E> getParent() {
