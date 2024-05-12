@@ -2,8 +2,11 @@ package implementations;
 
 import interfaces.AbstractTree;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Tree<E> implements AbstractTree<E> {
     private E key;
@@ -62,9 +65,30 @@ public class Tree<E> implements AbstractTree<E> {
         return builder.toString();
     }
 
+    public List<Tree<E>> traversWithBFS() {
+        Deque<Tree<E>> queue = new ArrayDeque<>();
+        queue.offer(this);
+        int indent = 0;
+        List<Tree<E>> allNodes = new ArrayList<>();
+
+        while (!queue.isEmpty()) {
+            Tree<E> tree = queue.poll();
+            allNodes.add(tree);
+            for (Tree<E> child : tree.children) {
+                queue.offer(child);
+            }
+        }
+        return allNodes;
+
+    }
+
     @Override
     public List<E> getLeafKeys() {
-        return null;
+        return traversWithBFS()
+                .stream()
+                .filter(tree -> tree.children.size() == 0)
+                .map(Tree::getKey)
+                .collect(Collectors.toList());
     }
 
     @Override
