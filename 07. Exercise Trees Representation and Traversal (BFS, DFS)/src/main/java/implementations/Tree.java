@@ -22,6 +22,7 @@ public class Tree<E> implements AbstractTree<E> {
 
     @Override
     public void setParent(Tree<E> parent) {
+        this.parent = parent;
     }
 
     @Override
