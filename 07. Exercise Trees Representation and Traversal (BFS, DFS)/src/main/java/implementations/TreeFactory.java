@@ -27,11 +27,11 @@ public class TreeFactory {
 
     private Tree<Integer> getRoot() {
         for (Tree<Integer> value : nodesByKeys.values()) {
-            if(value.getParent() == null){
+            if (value.getParent() == null) {
                 return value;
             }
-            return null;
         }
+        return null;
     }
 
     public Tree<Integer> createNodeByKey(int key) {
