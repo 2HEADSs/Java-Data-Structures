@@ -7,10 +7,14 @@ import java.util.List;
 import java.util.function.Consumer;
 
 public class BinaryTree<E> implements AbstractBinaryTree<E> {
+    public int size;
 
     public BinaryTree() {
     }
 
+    public BinaryTree(int size) {
+        this.size = size;
+    }
 
     @Override
     public E getKey() {
