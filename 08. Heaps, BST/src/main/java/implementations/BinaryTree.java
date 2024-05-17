@@ -8,6 +8,10 @@ import java.util.function.Consumer;
 
 public class BinaryTree<E> implements AbstractBinaryTree<E> {
 
+    public BinaryTree() {
+    }
+
+
     @Override
     public E getKey() {
         return null;
