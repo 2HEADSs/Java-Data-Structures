@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="737a477e-d0f0-4f5d-9509-0c9545c0bb88" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/implementations/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/implementations/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/implementations/MaxHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/implementations/MaxHeap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +34,8 @@
     "JUnit.BinaryTreeTest.testInOrder.executor": "Run",
     "JUnit.BinaryTreeTest.testPostOrder.executor": "Run",
     "JUnit.BinaryTreeTest.testPreOrder.executor": "Run",
+    "JUnit.MaxHeapTest.executor": "Run",
+    "JUnit.MaxHeapTest.testHeapifyUpAddOne.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -45,7 +48,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.BinaryTreeTest">
+  <component name="RunManager" selected="JUnit.MaxHeapTest">
     <configuration name="BinaryTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Heaps-BST" />
       <extension name="coverage">
@@ -57,22 +60,6 @@
       <option name="PACKAGE_NAME" value="implementations" />
       <option name="MAIN_CLASS_NAME" value="implementations.BinaryTreeTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BinaryTreeTest.testAsIndentedPreOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Heaps-BST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="implementations.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="implementations" />
-      <option name="MAIN_CLASS_NAME" value="implementations.BinaryTreeTest" />
-      <option name="METHOD_NAME" value="testAsIndentedPreOrder" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,7 +96,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BinaryTreeTest.testPreOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MaxHeapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Heaps-BST" />
       <extension name="coverage">
         <pattern>
@@ -118,8 +105,23 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="implementations" />
-      <option name="MAIN_CLASS_NAME" value="implementations.BinaryTreeTest" />
-      <option name="METHOD_NAME" value="testPreOrder" />
+      <option name="MAIN_CLASS_NAME" value="implementations.MaxHeapTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MaxHeapTest.testHeapifyUpAddOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Heaps-BST" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="implementations.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="implementations" />
+      <option name="MAIN_CLASS_NAME" value="implementations.MaxHeapTest" />
+      <option name="METHOD_NAME" value="testHeapifyUpAddOne" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MaxHeapTest" />
+        <item itemvalue="JUnit.MaxHeapTest.testHeapifyUpAddOne" />
         <item itemvalue="JUnit.BinaryTreeTest" />
         <item itemvalue="JUnit.BinaryTreeTest.testPostOrder" />
         <item itemvalue="JUnit.BinaryTreeTest.testInOrder" />
-        <item itemvalue="JUnit.BinaryTreeTest.testPreOrder" />
-        <item itemvalue="JUnit.BinaryTreeTest.testAsIndentedPreOrder" />
       </list>
     </recent_temporary>
   </component>
