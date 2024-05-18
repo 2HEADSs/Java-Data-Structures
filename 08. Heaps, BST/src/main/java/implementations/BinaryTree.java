@@ -8,10 +8,11 @@ import java.util.function.Consumer;
 
 public class BinaryTree<E> implements AbstractBinaryTree<E> {
 
+    private E key;
 
     @Override
     public E getKey() {
-        return null;
+        return this.key;
     }
 
     @Override
@@ -26,7 +27,7 @@ public class BinaryTree<E> implements AbstractBinaryTree<E> {
 
     @Override
     public void setKey(E key) {
-
+        this.key = key;
     }
 
     @Override
