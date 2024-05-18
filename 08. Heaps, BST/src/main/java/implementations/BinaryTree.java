@@ -9,6 +9,14 @@ import java.util.function.Consumer;
 public class BinaryTree<E> implements AbstractBinaryTree<E> {
 
     private E key;
+    private BinaryTree<E> leftChild;
+    private BinaryTree<E> rightChild;
+
+    public BinaryTree(E key, BinaryTree<E> leftChild, BinaryTree<E> rightChild) {
+        this.setKey(key);
+        this.leftChild = leftChild;
+        this.rightChild = rightChild;
+    }
 
     @Override
     public E getKey() {
@@ -32,7 +40,11 @@ public class BinaryTree<E> implements AbstractBinaryTree<E> {
 
     @Override
     public String asIndentedPreOrder(int indent) {
-        return null;
+        StringBuilder result = new StringBuilder();
+
+        
+
+        return result.toString();
     }
 
     @Override
