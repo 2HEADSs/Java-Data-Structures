@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="737a477e-d0f0-4f5d-9509-0c9545c0bb88" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/implementations/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/implementations/BinaryTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,6 +28,7 @@
   "keyToString": {
     "Application.Main.executor": "Run",
     "JUnit.BinarySearchTreeTest.executor": "Run",
+    "JUnit.BinaryTreeTest.executor": "Run",
     "JUnit.BinaryTreeTest.testAsIndentedPreOrder.executor": "Run",
     "JUnit.BinaryTreeTest.testInOrder.executor": "Run",
     "JUnit.BinaryTreeTest.testPostOrder.executor": "Run",
@@ -45,8 +45,8 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.BinaryTreeTest.testPostOrder">
-    <configuration name="BinarySearchTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.BinaryTreeTest">
+    <configuration name="BinaryTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Heaps-BST" />
       <extension name="coverage">
         <pattern>
@@ -55,7 +55,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="implementations" />
-      <option name="MAIN_CLASS_NAME" value="implementations.BinarySearchTreeTest" />
+      <option name="MAIN_CLASS_NAME" value="implementations.BinaryTreeTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BinaryTreeTest" />
         <item itemvalue="JUnit.BinaryTreeTest.testPostOrder" />
         <item itemvalue="JUnit.BinaryTreeTest.testInOrder" />
         <item itemvalue="JUnit.BinaryTreeTest.testPreOrder" />
         <item itemvalue="JUnit.BinaryTreeTest.testAsIndentedPreOrder" />
-        <item itemvalue="JUnit.BinarySearchTreeTest" />
       </list>
     </recent_temporary>
   </component>
