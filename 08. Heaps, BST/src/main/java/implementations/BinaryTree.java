@@ -45,10 +45,13 @@ public class BinaryTree<E> implements AbstractBinaryTree<E> {
         String padding = createPadding(indent) + this.getKey();
         result.append(padding);
 
-        if (this.getLeft()) {
-
+        if (this.getLeft() != null) {
+            String preOrder = this.getLeft().asIndentedPreOrder(indent + 2);
+            result.append(System.lineSeparator()).append(preOrder);
         }
-        if () {
+        if (this.getRight() != null) {
+            String preOrder = this.getRight().asIndentedPreOrder(indent + 2);
+            result.append(System.lineSeparator()).append(preOrder);
 
         }
 
