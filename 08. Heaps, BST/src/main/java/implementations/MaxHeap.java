@@ -8,7 +8,8 @@ import java.util.List;
 
 public class MaxHeap<E extends Comparable<E>> implements Heap<E> {
     private List<E> elements;
-    public MaxHeap(){
+
+    public MaxHeap() {
         this.elements = new ArrayList<>();
     }
 
@@ -25,14 +26,14 @@ public class MaxHeap<E extends Comparable<E>> implements Heap<E> {
 
     private void hipifyUp(int index) {
         int parentIndex = getParentIndex(index);
-        while (index > 0 && isLess(index, parentIndex)){
-                Collections.swap(this.elements,index,parentIndex);
-                index = parentIndex;
+        while (index > 0 && isLess(parentIndex, index)) {
+            Collections.swap(this.elements, parentIndex, index);
+            index = parentIndex;
         }
     }
 
-    private boolean isLess(int childIndex, int parentIndex) {
-        return getAt(childIndex).compareTo(getAt(parentIndex)) > 0;
+    private boolean isLess(int parentIndex, int childIndex) {
+        return getAt(parentIndex).compareTo(getAt(childIndex)) < 0;
     }
 
     private E getAt(int index) {
@@ -45,6 +46,9 @@ public class MaxHeap<E extends Comparable<E>> implements Heap<E> {
 
     @Override
     public E peek() {
+        if (this.size() == 0) {
+            throw new IllegalStateException("Illegal call to peak on empty heap");
+        }
         return this.elements.get(0);
     }
 }
