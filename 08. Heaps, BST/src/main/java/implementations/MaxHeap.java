@@ -25,10 +25,9 @@ public class MaxHeap<E extends Comparable<E>> implements Heap<E> {
     }
 
     private void hipifyUp(int index) {
-        int parentIndex = getParentIndex(index);
-        while (index > 0 && isLess(parentIndex, index)) {
-            Collections.swap(this.elements, parentIndex, index);
-            index = parentIndex;
+        while (index > 0 && isLess(getParentIndex(index), index)) {
+            Collections.swap(this.elements, getParentIndex(index), index);
+            index = getParentIndex(index);
         }
     }
 
