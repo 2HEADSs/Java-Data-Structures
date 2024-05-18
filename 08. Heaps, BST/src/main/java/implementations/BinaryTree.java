@@ -25,12 +25,12 @@ public class BinaryTree<E> implements AbstractBinaryTree<E> {
 
     @Override
     public AbstractBinaryTree<E> getLeft() {
-        return null;
+        return this.leftChild;
     }
 
     @Override
     public AbstractBinaryTree<E> getRight() {
-        return null;
+        return this.rightChild;
     }
 
     @Override
@@ -42,9 +42,26 @@ public class BinaryTree<E> implements AbstractBinaryTree<E> {
     public String asIndentedPreOrder(int indent) {
         StringBuilder result = new StringBuilder();
 
-        
+        String padding = createPadding(indent) + this.getKey();
+        result.append(padding);
+
+        if (this.getLeft()) {
+
+        }
+        if () {
+
+        }
 
         return result.toString();
+    }
+
+    private String createPadding(int indent) {
+
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < indent; i++) {
+            builder.append(" ");
+        }
+        return builder.toString();
     }
 
     @Override
