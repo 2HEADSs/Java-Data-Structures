@@ -32,8 +32,8 @@ public class PriorityQueue<E extends Comparable<E>> implements AbstractQueue<E> 
         }
     }
 
-    private boolean isLess(int parentIndex, int childIndex) {
-        return getAt(parentIndex).compareTo(getAt(childIndex)) < 0;
+    private boolean isLess(int first, int second) {
+        return getAt(first).compareTo(getAt(second)) < 0;
     }
 
     private E getAt(int index) {
@@ -67,9 +67,13 @@ public class PriorityQueue<E extends Comparable<E>> implements AbstractQueue<E> 
     }
 
     private E getLeftChild(int index) {
-
-
+        return this.elements.get(this.getLeftChildIndex(index));
     }
+
+    private E getRightChild(int index) {
+        return this.elements.get(this.getRightChildIndex(index));
+    }
+
 
     private int getLeftChildIndex(int index) {
         return 2 * index + 1;
@@ -80,7 +84,9 @@ public class PriorityQueue<E extends Comparable<E>> implements AbstractQueue<E> 
 
     }
 
-    private void heapifyDown(int i) {
-
+    private void heapifyDown(int index) {
+        while (getLeftChildIndex(index) < this.size() && isLess(index, getLeftChildIndex(index))) {
+    
+        }
     }
 }
