@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="737a477e-d0f0-4f5d-9509-0c9545c0bb88" name="Changes" comment="" />
+    <list default="true" id="737a477e-d0f0-4f5d-9509-0c9545c0bb88" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +48,22 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.PriorityQueueTest">
+  <component name="RunManager" selected="JUnit.BinarySearchTreeTest">
+    <configuration name="BinarySearchTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Heaps-BST" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="implementations.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="implementations" />
+      <option name="MAIN_CLASS_NAME" value="implementations.BinarySearchTreeTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BinaryTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Heaps-BST" />
       <extension name="coverage">
@@ -58,22 +75,6 @@
       <option name="PACKAGE_NAME" value="implementations" />
       <option name="MAIN_CLASS_NAME" value="implementations.BinaryTreeTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BinaryTreeTest.testPostOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Heaps-BST" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="implementations.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="implementations" />
-      <option name="MAIN_CLASS_NAME" value="implementations.BinaryTreeTest" />
-      <option name="METHOD_NAME" value="testPostOrder" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -139,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BinarySearchTreeTest" />
         <item itemvalue="JUnit.PriorityQueueTest" />
         <item itemvalue="JUnit.MaxHeapTest" />
         <item itemvalue="JUnit.MaxHeapTest.testHeapifyUpAddOne" />
         <item itemvalue="JUnit.BinaryTreeTest" />
-        <item itemvalue="JUnit.BinaryTreeTest.testPostOrder" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +166,7 @@
       <workItem from="1715718954117" duration="112000" />
       <workItem from="1715974925472" duration="1064000" />
       <workItem from="1716019040347" duration="683000" />
-      <workItem from="1716105885840" duration="3025000" />
+      <workItem from="1716105885840" duration="4112000" />
     </task>
     <servers />
   </component>
