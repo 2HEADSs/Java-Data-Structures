@@ -3,10 +3,16 @@ package implementations;
 import interfaces.AbstractBinarySearchTree;
 
 public class BinarySearchTree<E extends Comparable<E>> implements AbstractBinarySearchTree<E> {
+    private Node<E> root;
+    private Node<E> leftChild;
+    private Node<E> rightChild;
 
     @Override
     public void insert(E element) {
-
+        Node<E> newNode = new Node<>(element);
+        if (this.getRoot() == null) {
+            this.root = newNode;
+        }
     }
 
     @Override
@@ -26,16 +32,16 @@ public class BinarySearchTree<E extends Comparable<E>> implements AbstractBinary
 
     @Override
     public Node<E> getLeft() {
-        return null;
+        return this.leftChild;
     }
 
     @Override
     public Node<E> getRight() {
-        return null;
+        return this.rightChild;
     }
 
     @Override
     public E getValue() {
-        return null;
+        return this.root.value;
     }
 }
