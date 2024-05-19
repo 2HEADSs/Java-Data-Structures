@@ -86,7 +86,10 @@ public class PriorityQueue<E extends Comparable<E>> implements AbstractQueue<E> 
 
     private void heapifyDown(int index) {
         while (getLeftChildIndex(index) < this.size() && isLess(index, getLeftChildIndex(index))) {
-    
+            int rightChildIndex = getRightChildIndex(index);
+            if (rightChildIndex < this.size() && isLess(index, rightChildIndex)) {
+                index = rightChildIndex;
+            }
         }
     }
 }
