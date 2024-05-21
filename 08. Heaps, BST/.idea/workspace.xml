@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="737a477e-d0f0-4f5d-9509-0c9545c0bb88" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="737a477e-d0f0-4f5d-9509-0c9545c0bb88" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,30 +22,30 @@
     <option name="showLibraryContents" value="true" />
     <option name="useFileNestingRules" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "JUnit.BinarySearchTreeTest.executor": "Run",
-    "JUnit.BinaryTreeTest.executor": "Run",
-    "JUnit.BinaryTreeTest.testAsIndentedPreOrder.executor": "Run",
-    "JUnit.BinaryTreeTest.testInOrder.executor": "Run",
-    "JUnit.BinaryTreeTest.testPostOrder.executor": "Run",
-    "JUnit.BinaryTreeTest.testPreOrder.executor": "Run",
-    "JUnit.MaxHeapTest.executor": "Run",
-    "JUnit.MaxHeapTest.testHeapifyUpAddOne.executor": "Run",
-    "JUnit.PriorityQueueTest.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BinarySearchTreeTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BinaryTreeTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BinaryTreeTest.testAsIndentedPreOrder.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BinaryTreeTest.testInOrder.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BinaryTreeTest.testPostOrder.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BinaryTreeTest.testPreOrder.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MaxHeapTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.MaxHeapTest.testHeapifyUpAddOne.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PriorityQueueTest.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.BinarySearchTreeTest">
     <configuration name="BinarySearchTreeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Heaps-BST" />
@@ -167,6 +165,7 @@
       <workItem from="1715974925472" duration="1064000" />
       <workItem from="1716019040347" duration="683000" />
       <workItem from="1716105885840" duration="4112000" />
+      <workItem from="1716320007323" duration="134000" />
     </task>
     <servers />
   </component>
