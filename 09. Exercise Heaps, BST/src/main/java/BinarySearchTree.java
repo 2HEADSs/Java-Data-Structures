@@ -43,8 +43,25 @@ public class BinarySearchTree<E extends Comparable<E>> {
     }
 
     public void insert(E element) {
-
+        insertInto(this.root, element);
     }
+
+    private void insertInto(Node<E> node, E element) {
+        if (isGreater(element, node)) {
+            if (node.getRight() == null) {
+                node.rightChild = new Node<>(element);
+            } else {
+                insertInto(node.getRight(), element);
+            }
+        } else if (isLess(element, node)) {
+            if (node.getLeft() == null) {
+                node.leftChild = new Node<>(element);
+            } else {
+                insertInto(node.getLeft(), element);
+            }
+        }
+    }
+
 
     public boolean contains(E element) {
         return false;
@@ -80,5 +97,13 @@ public class BinarySearchTree<E extends Comparable<E>> {
 
     public E floor(E element) {
         return null;
+    }
+
+    private boolean isGreater(E element, Node<E> node) {
+        return element.compareTo(node.getValue()) > 0;
+    }
+
+    private boolean isLess(E element, Node<E> node) {
+        return element.compareTo(node.getValue()) < 0;
     }
 }
