@@ -106,4 +106,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
     private boolean isLess(E element, Node<E> node) {
         return element.compareTo(node.getValue()) < 0;
     }
+
+    private boolean isEqual(E element, Node<E> node) {
+        return element.compareTo(node.getValue()) == 0;
+    }
 }
