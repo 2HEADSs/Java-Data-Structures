@@ -39,7 +39,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
 
     public Node<E> getRoot() {
         return this.root;
-        
+
     }
 
     public void insert(E element) {
