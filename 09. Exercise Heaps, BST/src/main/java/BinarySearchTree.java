@@ -41,10 +41,9 @@ public class BinarySearchTree<E extends Comparable<E>> {
         if (node == null) {
             return;
         }
-
-        nodeInOrder(node.getLeft(),consumer);
+        nodeInOrder(node.getLeft(), consumer);
         consumer.accept(node.getValue());
-        nodeInOrder(node.getRight(),consumer);
+        nodeInOrder(node.getRight(), consumer);
     }
 
     public Node<E> getRoot() {
@@ -74,7 +73,21 @@ public class BinarySearchTree<E extends Comparable<E>> {
 
 
     public boolean contains(E element) {
-        return false;
+        return containsNode(this.root, element);
+    }
+
+    private boolean containsNode(Node<E> node, E element) {
+        if (node == null) {
+            return false;
+        }
+        if (isEqual(element, node)) {
+            return true;
+        } else if (isGreater(element, node)) {
+            return containsNode(node.getRight(), element);
+        }
+
+        return containsNode(node.getLeft(), element);
+
     }
 
     public BinarySearchTree<E> search(E element) {
