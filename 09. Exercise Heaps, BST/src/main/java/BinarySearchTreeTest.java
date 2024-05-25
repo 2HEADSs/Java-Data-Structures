@@ -57,4 +57,16 @@ public class BinarySearchTreeTest {
         assertFalse(bst.contains(-23));
     }
 
+    @Test
+    public void testSearchTrue() {
+        BinarySearchTree<Integer> search = bst.search(7);
+        assertEquals(Integer.valueOf(7),search.getRoot().getValue());
+        assertEquals(Integer.valueOf(6),search.getRoot().getLeft().getValue());
+    }
+
+    @Test
+    public void testSearchFalse() {
+        assertFalse(bst.contains(-23));
+    }
+
 }
