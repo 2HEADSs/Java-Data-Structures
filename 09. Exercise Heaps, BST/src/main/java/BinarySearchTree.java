@@ -13,8 +13,8 @@ public class BinarySearchTree<E extends Comparable<E>> {
 
     public BinarySearchTree(Node<E> otherRoot) {
         this.root = new Node<>(otherRoot.getValue());
-        this.root.leftChild = new Node<>(otherRoot.getLeft());
-        this.root.rightChild = new Node<>(otherRoot.getRight());
+//        this.root.leftChild = new Node<>(otherRoot.getLeft());
+//        this.root.rightChild = new Node<>(otherRoot.getRight());
     }
 
     public static class Node<E> {
