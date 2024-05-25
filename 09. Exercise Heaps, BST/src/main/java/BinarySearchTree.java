@@ -73,7 +73,21 @@ public class BinarySearchTree<E extends Comparable<E>> {
 
 
     public boolean contains(E element) {
-        return containsNode(this.root, element);
+        //recursion
+//        return containsNode(this.root, element);
+
+        //iterable
+        Node<E> current = this.root;
+        while (current != null) {
+            if (isEqual(element, current)) {
+                break;
+            } else if (isGreater(element, current)) {
+                current = current.getRight();
+            } else {
+                current = current.getLeft();
+            }
+        }
+        return current == null;
     }
 
     private boolean containsNode(Node<E> node, E element) {
