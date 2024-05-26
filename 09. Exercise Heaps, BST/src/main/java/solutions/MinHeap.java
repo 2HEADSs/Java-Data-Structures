@@ -29,15 +29,15 @@ public class MinHeap<E extends Comparable<E> & Decrease<E>> implements Heap<E> {
         int index = this.data.size() - 1;
         int parentIndex = this.getParentIndexFor(index);
 
-        while (index > 0 && isLess(index,parentIndex)){
-            Collections.swap(this.data,index,parentIndex);
+        while (index > 0 && isLess(index, parentIndex)) {
+            Collections.swap(this.data, index, parentIndex);
             index = parentIndex;
             parentIndex = this.getParentIndexFor(index);
         }
     }
 
     private boolean isLess(int firstIndex, int secondIndex) {
-        
+        return this.data.get(firstIndex).compareTo(this.data.get(secondIndex)) < 0;
     }
 
     private int getParentIndexFor(int index) {
@@ -58,6 +58,8 @@ public class MinHeap<E extends Comparable<E> & Decrease<E>> implements Heap<E> {
 
     @Override
     public E poll() {
+        ensureNonEmpty();
+
         return null;
     }
 
