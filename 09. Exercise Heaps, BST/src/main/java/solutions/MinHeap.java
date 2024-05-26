@@ -4,6 +4,7 @@ import interfaces.Decrease;
 import interfaces.Heap;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class MinHeap<E extends Comparable<E> & Decrease<E>> implements Heap<E> {
@@ -26,7 +27,21 @@ public class MinHeap<E extends Comparable<E> & Decrease<E>> implements Heap<E> {
 
     private void heapifyUp() {
         int index = this.data.size() - 1;
-        int parentIndex = (index - 1) / 2;
+        int parentIndex = this.getParentIndexFor(index);
+
+        while (index > 0 && isLess(index,parentIndex)){
+            Collections.swap(this.data,index,parentIndex);
+            index = parentIndex;
+            parentIndex = this.getParentIndexFor(index);
+        }
+    }
+
+    private boolean isLess(int firstIndex, int secondIndex) {
+        
+    }
+
+    private int getParentIndexFor(int index) {
+        return (index - 1) / 2;
     }
 
     @Override
