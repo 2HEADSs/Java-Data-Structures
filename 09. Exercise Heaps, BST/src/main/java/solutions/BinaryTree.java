@@ -1,5 +1,6 @@
 package solutions;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BinaryTree {
@@ -14,8 +15,8 @@ public class BinaryTree {
     }
 
     public Integer findLowestCommonAncestor(int first, int second) {
-        List<Integer> firstPath = findPath(this, first);
-        List<Integer> secondPath = findPath(this, second);
+        List<Integer> firstPath = findPath(first);
+        List<Integer> secondPath = findPath(second);
 
         int smallerSize = Math.min(firstPath.size(), secondPath.size());
 
@@ -25,8 +26,37 @@ public class BinaryTree {
                 break;
             }
         }
-        
+
         return firstPath.get(i - 1);
+    }
+
+    private List<Integer> findPath(int element) {
+        List<Integer> result = new ArrayList<>();
+        findNodePath(this, element, result);
+
+        return result;
+
+    }
+
+    private boolean findNodePath(BinaryTree binaryTree, int element, List<Integer> currentPath) {
+        if (binaryTree == null) {
+            return false;
+        }
+        if (binaryTree.value == element) {
+            return true;
+        }
+        currentPath.add(binaryTree.value);
+
+        boolean leftResult = findNodePath(binaryTree.left, element, currentPath);
+        if (leftResult) {
+            return true;
+        }
+        boolean rightResult = findNodePath(binaryTree.right, element, currentPath);
+        if (rightResult) {
+            return true;
+        }
+        currentPath.remove(Integer.valueOf(binaryTree.value));
+        return false;
     }
 
     public List<Integer> topView() {
